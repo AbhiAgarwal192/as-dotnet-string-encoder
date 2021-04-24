@@ -17,6 +17,9 @@ namespace Service.Tests
     public class EncoderSpec
     {
         [Theory]
+        [InlineData("y"," ")]
+        [InlineData(" ", "y")]
+        [InlineData("1","1")]
         [InlineData("Hello World! 1234", "g2kk4yv4qkc!y4321")]
         [InlineData("123B456", "321a654")]
         [InlineData("Have you tried turning it off and on again?", "g1u2y 45ysq32cys5qm3mfy3sy4eey1mcy4my1f13m?")]
